@@ -1,0 +1,13 @@
+html, body {
+  background-color: #E9E9E9;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+
+  &__usable {
+    float: right;
+    width: calc(100vw - 65px);
+  }
+}
