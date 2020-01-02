@@ -1,24 +1,3 @@
-.not-expanded {
-    width: 50vw;
-    max-width: 450px;
-    height: 50vw;
-    max-height: 450px;
-
-    top: 25vh;
-
-    transform: rotate(5deg);
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        transform: scale(0.95);
-    }
-}
-
 .modal {
     z-index: 0;
     background-color: #e9e9e9;
@@ -31,10 +10,12 @@
     position: absolute;
     right: 12vw;
 
+    -webkit-tap-highlight-color: transparent;
+
+    max-width: 62vw;
+
     &__not-expanded {
-        width: 50vw;
-        max-width: 450px;
-        max-height: 450px;
+        height: auto;
     
         top: 30vh;
     
@@ -49,11 +30,9 @@
 
     &__expanded {
         transform: rotate(0deg);
-        top: 15vh;
-        width: 62vw;
-        height: 70vh;
-        max-width: 800px;    
-        max-height: 70vh;
+        top: 30vh;
+
+        cursor: pointer;
 
     }
 }
@@ -64,10 +43,17 @@
     }
 
     &-expanded {
-        display: none;
+        margin-top: 2vh;
+        max-width: 60vw;
+        max-height: 20vh; 
+        opacity: 1;
+        transition: max-height 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), max-width 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.4s 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 }
 
 .vanish {
-    display: none;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), max-height 1s 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), max-width 1s 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

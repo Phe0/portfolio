@@ -4,15 +4,16 @@ import './ExpandableModal.scss'
 class ExpandableModal extends Component {
 
     state = {
-        style: 'modal__not-expanded'
+        style: 'modal__not-expanded',
+        expanded: false
     }
 
     handleClick = () => {
-        if(this.state.style === 'modal__not-expanded') {
-            this.setState({style: 'modal__expanded'})
+        if(!this.state.expanded) {
+            this.setState({style: 'modal__expanded', expanded: !this.state.expanded})
         }
         else {
-            this.setState({style: 'modal__not-expanded'})
+            this.setState({style: 'modal__not-expanded', expanded: !this.state.expanded})
         }
     }
 
@@ -22,7 +23,7 @@ class ExpandableModal extends Component {
                 <div className="inside-not-expanded">
                     {this.props.children[0]}
                 </div>
-                <div className="inside-expanded">
+                <div className={`inside-expanded ${this.state.expanded ? null : 'vanish'}`}>
                     {this.props.children[1]}
                 </div>
             </div>

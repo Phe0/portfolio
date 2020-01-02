@@ -8,6 +8,8 @@ import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 function App() {
   return (
+    <>
+    <meta name="theme-color" content="#38177D" />
     <div className="App">
       <Sidenav/>
       <div className="App__usable">
@@ -20,13 +22,14 @@ function App() {
                   <h2 className="intro-card__career">SOFTWARE ENGINEER</h2>
                 </div>
                 <div>
-                  
+                  <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
                 </div>
               </ExpandableModal>
             </ParallaxLayer>
         </Parallax>
       </div>
     </div>
+    </>
   );
 }
 
