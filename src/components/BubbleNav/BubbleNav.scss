@@ -1,0 +1,122 @@
+@import "../../App.scss";
+
+$bubble-size: 35vh;
+$big-bubble: 200vh;
+
+.modal-open {
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.front-enable {
+  z-index: 2;
+}
+
+.bubble-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  &__bubble {
+    z-index: 5;
+    position: absolute;
+    width: $bubble-size;
+    height: $bubble-size;
+    border-radius: 50%;
+    transition: all 0.1s;
+  }
+}
+
+.position-1 {
+  top: -$bubble-size/2;
+  left: -$bubble-size/2;
+  background-color: $orange;
+  cursor: pointer;
+  &:hover {
+    background-color: $purple;
+    transform: scale(0.95);
+  }
+  &__open {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: $big-bubble;
+    height: $big-bubble;
+    border-radius: 50%;
+    background-color: $purple;
+  }
+}
+
+.position-2 {
+  top: -$bubble-size/2;
+  right: -$bubble-size/2;
+  background-color: $purple;
+  cursor: pointer;
+  &:hover {
+    background-color: $orange;
+    transform: scale(0.95);
+  }
+  &__open {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: $big-bubble;
+    height: $big-bubble;
+    border-radius: 50%;
+    background-color: $orange;
+  }
+}
+
+.position-3 {
+  bottom: -$bubble-size/2;
+  left: -$bubble-size/2;
+  background-color: $purple;
+  cursor: pointer;
+  &:hover {
+    background-color: $orange;
+    transform: scale(0.95);
+  }
+  &__open {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    width: $big-bubble;
+    height: $big-bubble;
+    border-radius: 50%;
+    background-color: $orange;
+  }
+}
+
+.position-4 {
+  bottom: -$bubble-size/2;
+  right: -$bubble-size/2;
+  background-color: $orange;
+  cursor: pointer;
+  &:hover {
+    background-color: $purple;
+    transform: scale(0.95);
+  }
+  &__open {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    width: $big-bubble;
+    height: $big-bubble;
+    border-radius: 50%;
+    background-color: $purple;
+    cursor: default;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './goofyLine.scss'
+import './GoofyLine.scss'
 
 import CustomHeading from '../CustomHeading/CustomHeading'
 
