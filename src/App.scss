@@ -5,6 +5,7 @@ $bold-font: 'Archivo Black', sans-serif;
 
 $purple: #2F1183;
 $orange: #E25C75;
+$white: #e9e9e9;
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
