@@ -10,8 +10,8 @@ const GoofyLine = (props) => {
     return (
         <CustomHeading priority={props.priority}>
             {
-                props.line.split('').map(letter => (
-                    <span className={classes.join(" ")}>{letter.toUpperCase()}</span>
+                props.line.split('').map((letter, index) => (
+                    <span key={`letter-${letter}${index}`} className={classes.join(" ")}>{letter.toUpperCase()}</span>
                 ))
             }
         </CustomHeading>

@@ -28,6 +28,35 @@
   animation-fill-mode: forwards;
 }
 
+
+.goofy-word.white {
+  font-family: $bold-font;
+  color: $white;
+  animation-name: bouncy-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.goofy-word.white:hover {
+  animation-name: bouncy-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.goofy-word.orange-only {
+  font-family: $bold-font;
+  color: $orange;
+  animation-name: bouncy-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.goofy-word.orange-only:hover {
+  animation-name: bouncy-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes bouncy-in-purple {
   0% {
     transform: scale(1, 1);
@@ -77,5 +106,26 @@
   100% {
     transform: scale(1, 1);
     color: $orange;
+  }
+}
+
+@keyframes bouncy-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.15, 0.85);
+  }
+}
+
+@keyframes bouncy-out {
+  0% {
+    transform: scale(1.15, 0.85);
+  }
+  50% {
+    transform: scale(0.85, 1.15);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }

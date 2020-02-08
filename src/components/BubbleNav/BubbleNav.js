@@ -1,5 +1,6 @@
 import React from 'react'
 import './BubbleNav.scss'
+import About from '../About/About'
 
 class BubbleNav extends React.Component {
 
@@ -19,7 +20,7 @@ class BubbleNav extends React.Component {
                 <div className={`bubble-nav__bubble position-1${this.state.position1 ? '__open' : ''}`} onClick={() => this.openBubble(1)}>
                     {
                         this.state.position1 ? 
-                            null 
+                            <About onClose={this.closeBubble}/>
                             : 
                             <h6 className="bubble-nav__bubble__item1">ABOUT ME</h6>
                     }

@@ -24,42 +24,49 @@ $min-bubble: 100vw;
   height: 100vh;
 
   &__bubble {
-    z-index: 5;
     position: absolute;
     width: $bubble-size;
     height: $bubble-size;
     transition: all 0.1s;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     &__item1 {
       color: $white;
       font-family: $bold-font;
       font-size: 1.8vh;
-      transform: translate(-15%, -35%);
+      display: inline-block;
+      position: absolute;
+      top: 40%;
+      left: 7%;
     }
 
     &__item2 {
       color: $white;
       font-family: $bold-font;
       font-size: 1.8vh;
-      transform: translate(15%, -35%);
+      display: inline-block;
+      position: absolute;
+      top: 40%;
+      right: 7%;
     }
 
     &__item3 {
       color: $white;
       font-family: $bold-font;
       font-size: 1.6vh;
-      transform: translate(-8%, 110%);
+      display: inline-block;
+      position: absolute;
+      bottom: 30%;
+      left: 5%;
     }
 
     &__item4 {
       color: $white;
       font-family: $bold-font;
       font-size: 1.7vh;
-      transform: translate(10%, 110%);
+      display: inline-block;
+      position: absolute;
+      bottom: 30%;
+      right: 5%;
     }
   }
 }
@@ -76,12 +83,11 @@ $min-bubble: 100vw;
   }
   &__open {
     z-index: 10;
-    position: absolute;
     border-radius: 0 0 100% 0;
     width: $big-bubble;
+    height: $big-bubble;
     min-width: $min-bubble;
     min-height: $min-bubble;
-    height: $big-bubble;
     background-color: $purple;
   }
 }
@@ -90,10 +96,10 @@ $min-bubble: 100vw;
   top: 0;
   right: 0;
   border-radius: 0 0 0 100%;
-  background-color: $purple;
+  background-color: $orange;
   cursor: pointer;
   &:hover {
-    background-color: $orange;
+    background-color: $purple;
     transform: scale(1.1);
   }
   &__open {
@@ -138,10 +144,10 @@ $min-bubble: 100vw;
   bottom: 0;
   right: 0;
   border-radius: 100% 0 0 0;
-  background-color: $orange;
+  background-color: $purple;
   cursor: pointer;
   &:hover {
-    background-color: $purple;
+    background-color: $orange;
     transform: scale(1.1);
   }
   &__open {
