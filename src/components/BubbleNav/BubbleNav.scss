@@ -28,6 +28,7 @@ $min-bubble: 100vw;
     width: $bubble-size;
     height: $bubble-size;
     transition: all 0.1s;
+    border: none;
 
     &__item1 {
       color: $white;

@@ -17,4 +17,4 @@ const GoofyLine = (props) => {
         </CustomHeading>
     )
 }
-export default GoofyLine
+export default React.memo(GoofyLine)

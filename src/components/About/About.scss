@@ -5,6 +5,11 @@ $max_width_p: 1200px;
 $min_font_p: 20px;
 $max_font_p: 28px;
 
+.close-icon {
+    width: 18px;
+    cursor: pointer;
+}
+
 .screen {
     position: absolute;
     width: 100vw;
@@ -19,15 +24,19 @@ $max_font_p: 28px;
         width: 60vw;
         pointer-events: all;
 
-        &__title {
-            width: 35%;
+        &__title-area {
+            display: flex;
+            justify-content: space-between;
+            &__title {
+                width: 35%;
+            }
         }
 
         &__body {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            
+
             &__text-area {
                 margin-bottom: 1.5rem;
                 width: 100%;
@@ -37,7 +46,7 @@ $max_font_p: 28px;
                 &__text {
                     line-height: 1.4;
                     font-family: $main-font;
-                    color: #B3ADBF;
+                    color: #b3adbf;
                     @include fluid-type($min_width_p, $max_width_p, $min_font_p, $max_font_p);
 
                     & a {
@@ -63,7 +72,6 @@ $max_font_p: 28px;
                                 width: 100%;
                             }
                         }
-                        
                     }
                 }
             }
@@ -99,6 +107,5 @@ $max_font_p: 28px;
                 }
             }
         }
-
     }
 }

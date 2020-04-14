@@ -13,4 +13,4 @@ const CustomHeading = (props) => {
         </CustomTag>
     )
 }
-export default CustomHeading
+export default React.memo(CustomHeading)
