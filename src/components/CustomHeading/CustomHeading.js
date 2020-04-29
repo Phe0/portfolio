@@ -6,7 +6,7 @@ const CustomHeading = (props) => {
     const CustomTag = `h${props.priority}`
 
     return (
-        <CustomTag className="custom-heading" >
+        <CustomTag role="text" className="custom-heading" >
             {
                 props.children
             }

@@ -36,7 +36,7 @@ function BubbleNav() {
     }
 
     return (
-        <div className={`bubble-nav ${isOpen ? 'front-enable' : ''} `}>
+        <div role={isOpen ? 'dialog': 'nav'} className={`bubble-nav ${isOpen ? 'front-enable' : ''} `}>
             <div className={`modal-${isOpen ? 'open' : ''}`} onClick={() => closeBubble()}>
             </div>
             {
@@ -60,12 +60,12 @@ function BubbleNav() {
                                 throw new Error()
                         }
                         return (
-                            <div key={index} className={`bubble-nav__bubble position-${index + 1}__open`
+                            <section key={index} className={`bubble-nav__bubble position-${index + 1}__open`
                             }>
                                 <Suspense fallback={<div></div>}>
                                     <MyComponent close={closeBubble} />
                                 </Suspense>
-                            </div>
+                            </section>
                         )
                     }
                     else {
