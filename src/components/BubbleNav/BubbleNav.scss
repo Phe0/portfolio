@@ -1,9 +1,17 @@
 @import "../../App.scss";
 
 $bubble-size: 16vh;
-$big-bubble: 140vw;
-$min-bubble: 140vw;
 
+@mixin bubbleSize() {
+  @media screen and (min-width: 1050px) {
+    width: 140vw;
+    height: 140vw;
+  }
+  @media screen and (max-width: 1050px) {
+    width: 140vh;
+    height: 140vh;
+  }
+}
 
 .front-enable {
   z-index: 2;
@@ -17,6 +25,7 @@ $min-bubble: 140vw;
     height: $bubble-size;
     transition: transform .2s, width .6s, height .6s; 
     border: none;
+    overflow: hidden;
 
     &__item1 {
       color: $white;
@@ -70,8 +79,7 @@ $min-bubble: 140vw;
 
 .open {
   overflow: hidden;
-  width: $big-bubble;
-  height: $big-bubble;
+  @include bubbleSize;
 }
 
 .close {
