@@ -1,3 +1,6 @@
+@import "../../App.scss";
+
+
 .close-icon {
     width: 18px;
     cursor: pointer;
@@ -11,6 +14,7 @@
     pointer-events: none;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -27,6 +31,63 @@
 
     &__title {
         width: 35%;
+    }
+}
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 48%));
+    gap: 1rem;
+
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.experience-card {
+    background-color: $white;
+    border-radius: 10px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__heading {
+        &__place {
+            @include fluid-type(320px, 600px, 20px, 32px);
+            font-family: $bold-font;
+            font-weight: 400;
+            color: $purple;
+        }
+        &__role {
+            @include fluid-type(320px, 600px, 20px, 24px);
+            font-family: $bold-font;
+            font-weight: 400;
+            color: $orange;
+        }
+    }
+
+    &__date {
+        color: #353535;
+        margin: 0;
+        margin-top: 1.5rem;
+        text-align: right;
+        font-family: $bold-font;
+        font-weight: 100;
+        @include fluid-type(320px, 600px, 10px, 14px);
+    }
+
+    &__description {
+        color: #353535;
+        margin: 0;
+        margin-top: 1.5rem;
+        text-align: justify;
+        font-family: $main-font;
+        @include fluid-type(320px, 600px, 14px, 20px);
     }
 }
 

@@ -20,7 +20,8 @@ $max_font_p: 28px;
     align-items: center;
 
     &__about {
-        width: 60vw;
+        width: 70vw;
+        min-width: 300px;
         pointer-events: all;
 
         &__title-area {
@@ -33,6 +34,7 @@ $max_font_p: 28px;
         }
 
         &__body {
+            padding-right: 10px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;

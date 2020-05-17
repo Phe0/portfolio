@@ -3,6 +3,8 @@ import GoofyLine from '../GoofyLine/GoofyLine'
 import closeIcon from '../../assets/close.svg'
 import './Experience.scss'
 
+import experiences from '../../utils/experience'
+
 function Experience({close}) {
 
     return (
@@ -14,6 +16,20 @@ function Experience({close}) {
                     </article>
                     <img src={closeIcon} role="button" alt="close button" className="close-icon" onClick={() => close()} />
                 </section >
+                <section className="experiences">
+                    {
+                        experiences.map((experience, index) => (
+                            <section key={index} className="experience-card" >
+                                <div className="experience-card__heading">
+                                    <h2 className="experience-card__heading__place">{experience.place}</h2>
+                                    <h3 className="experience-card__heading__role">{experience.role}</h3>
+                                </div>
+                                <p className="experience-card__description">{experience.description}</p>
+                                <p className="experience-card__date">{experience.date}</p>
+                            </section>
+                        ))
+                    }
+                </section>
             </section>
         </main>
     )
