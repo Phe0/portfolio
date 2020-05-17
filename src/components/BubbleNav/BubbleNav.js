@@ -4,11 +4,11 @@ import './BubbleNav.scss'
 import About from '../About/About'
 import Skills from '../Skills/Skills'
 import Experience from '../Experience/Experience'
-import Contact from '../Contact/Contact'
+import Projects from '../Projects/Projects'
 
 function BubbleNav() {
 
-    const navs = [{ name: 'ABOUT ME', component: About }, { name: 'MY SKILLS', component: Skills }, { name: 'EXPERIENCES', component: Experience }, { name: 'CONTACT ME', component: Contact }]
+    const navs = [{ name: 'ABOUT ME', component: About }, { name: 'MY SKILLS', component: Skills }, { name: 'EXPERIENCES', component: Experience }, { name: 'PROJECTS', component: Projects }]
 
     const [shouldAnimate, setShouldAnimate] = useState(false);
     const [positions, setPositions] = useState({

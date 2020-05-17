@@ -18,6 +18,9 @@ function Skills({close}) {
                     <img src={closeIcon} role="button" alt="close button" className="close-icon" onClick={() => close()} />
                 </section >
                 <section className="skills-content">
+                    <p className="screen__about__body__text-area__text">
+                        Here are some of my skills.
+                    </p>
                     <section className="skills-content__section">
                         {
                             skills.map((skill, index) => (
@@ -25,6 +28,9 @@ function Skills({close}) {
                             ))
                         }
                     </section>
+                    <p className="screen__about__body__text-area__text">
+                        And here are some of the technologies I enjoy using.
+                    </p>
                     <section className="skills-content__section">
                     {
                         techs.map((tech, index) => (

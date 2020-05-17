@@ -6,6 +6,11 @@
     cursor: pointer;
 }
 
+$min_width_p: 320px;
+$max_width_p: 1200px;
+$min_font_p: 20px;
+$max_font_p: 28px;
+
 .experience {
     position: absolute;
     bottom: 0;
@@ -42,6 +47,13 @@
     max-height: 70vh;
     overflow-y: auto;
     padding-right: 10px;
+}
+
+.experience-text {
+    line-height: 1.4;
+    font-family: $main-font;
+    color: $white;
+    @include fluid-type($min_width_p, $max_width_p, $min_font_p, $max_font_p);
 }
 
 .experience-card {

@@ -40,10 +40,10 @@
     overflow-y: auto;
     &__section {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin: 4rem 0;
+        margin: 2rem 0 4rem 0;
         margin-right: 10px;
     }
 }

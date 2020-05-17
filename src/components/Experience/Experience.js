@@ -1,6 +1,6 @@
 import React from 'react';
 import GoofyLine from '../GoofyLine/GoofyLine'
-import closeIcon from '../../assets/close.svg'
+import closeIcon from '../../assets/closeWhite.svg'
 import './Experience.scss'
 
 import experiences from '../../utils/experience'
@@ -16,6 +16,9 @@ function Experience({close}) {
                     </article>
                     <img src={closeIcon} role="button" alt="close button" className="close-icon" onClick={() => close()} />
                 </section >
+                <p className="experience-text">
+                    Those are some important experiences I had in my career so far.
+                </p>
                 <section className="experiences">
                     {
                         experiences.map((experience, index) => (
