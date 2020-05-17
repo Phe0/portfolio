@@ -57,6 +57,20 @@
   animation-fill-mode: forwards;
 }
 
+.goofy-word.purple-only {
+  font-family: $bold-font;
+  color: $purple;
+  animation-name: bouncy-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.goofy-word.purple-only:hover {
+  animation-name: bouncy-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes bouncy-in-purple {
   0% {
     transform: scale(1, 1);

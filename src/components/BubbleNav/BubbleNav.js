@@ -1,11 +1,16 @@
-import React, { useState, Suspense } from 'react'
+import React, { useState } from 'react'
 import './BubbleNav.scss'
+
+import About from '../About/About'
+import Skills from '../Skills/Skills'
+import Experience from '../Experience/Experience'
+import Contact from '../Contact/Contact'
 
 function BubbleNav() {
 
-    const navs = [{ name: 'ABOUT ME' }, { name: 'MY SKILLS' }, { name: 'EXPERIENCES' }, { name: 'CONTACT ME' }]
+    const navs = [{ name: 'ABOUT ME', component: About }, { name: 'MY SKILLS', component: Skills }, { name: 'EXPERIENCES', component: Experience }, { name: 'CONTACT ME', component: Contact }]
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [shouldAnimate, setShouldAnimate] = useState(false);
     const [positions, setPositions] = useState({
         1: false,
         2: false,
@@ -22,7 +27,9 @@ function BubbleNav() {
         }
         pos[position] = true
         setPositions(pos)
-        setIsOpen(true)
+        if(!shouldAnimate) {
+            setShouldAnimate(true);
+        }
     }
 
     function closeBubble() {
@@ -32,53 +39,32 @@ function BubbleNav() {
             3: false,
             4: false
         })
-        setIsOpen(false)
     }
 
     return (
-        <div role={isOpen ? 'dialog': 'nav'} className={`bubble-nav ${isOpen ? 'front-enable' : ''} `}>
-            <div className={`modal-${isOpen ? 'open' : ''}`} onClick={() => closeBubble()}>
-            </div>
+        <>
             {
                 navs.map((nav, index) => {
-                    if (positions[index + 1]) {
-                        let MyComponent
-                        switch (index) {
-                            case 0:
-                                MyComponent = React.lazy(() => import('../About/About'))
-                                break
-                            case 1:
-                                MyComponent = React.lazy(() => import('../Skills/Skills'))
-                                break
-                            case 2:
-                                MyComponent = React.lazy(() => import('../Experience/Experience'))
-                                break
-                            case 3:
-                                MyComponent = React.lazy(() => import('../Contact/Contact'))
-                                break
-                            default:
-                                throw new Error()
-                        }
-                        return (
-                            <section key={index} className={`bubble-nav__bubble position-${index + 1}__open`
-                            }>
-                                <Suspense fallback={<div></div>}>
-                                    <MyComponent close={closeBubble} />
-                                </Suspense>
-                            </section>
-                        )
-                    }
-                    else {
-                        return (
-                            <div role="button" key={index} className={`bubble-nav__bubble position-${index + 1}`
-                            } onClick={() => openBubble(index + 1)}>
-                                <h6 className={`bubble-nav__bubble__item${index + 1}`}>{nav.name}</h6>
-                            </div>
-                        )
-                    }
+                    return (
+                        <div role="button" key={index} className={`bubble-nav__bubble position`
+                        } onClick={() => openBubble(index + 1)}>
+                            <h6 className={`bubble-nav__bubble__item${index + 1}`}>{nav.name}</h6>
+                        </div>
+                    )
                 })
             }
-        </div >
+            {
+                navs.map((nav, index) => {
+                    let MyComponent = nav.component;
+                    return (
+                        <section key={index} className={`bubble-nav__bubble open-${index+1} ${positions[index+1] ? `open` : `close`}`
+                        }>
+                            <MyComponent close={closeBubble} />
+                        </section>
+                    )
+                })
+            }
+        </>
     )
 }
 export default React.memo(BubbleNav)

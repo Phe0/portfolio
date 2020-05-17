@@ -1,33 +1,21 @@
 @import "../../App.scss";
 
 $bubble-size: 16vh;
-$big-bubble: 100vh;
-$min-bubble: 100vw;
+$big-bubble: 140vw;
+$min-bubble: 140vw;
 
-.modal-open {
-  position: fixed;
-  z-index: 9;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  opacity: 0.6;
-  cursor: pointer;
-}
 
 .front-enable {
   z-index: 2;
 }
 
 .bubble-nav {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
 
   &__bubble {
     position: absolute;
     width: $bubble-size;
     height: $bubble-size;
-    transition: all 0.1s;
+    transition: transform .2s, width .6s, height .6s; 
     border: none;
 
     &__item1 {
@@ -72,96 +60,100 @@ $min-bubble: 100vw;
   }
 }
 
-.position-1 {
+.position {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.open {
+  overflow: hidden;
+  width: $big-bubble;
+  height: $big-bubble;
+}
+
+.close {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.position:nth-of-type(1) {
   top: 0;
   left: 0;
   border-radius: 0 0 100% 0;
   background-color: $orange;
-  cursor: pointer;
+
   &:hover {
-    background-color: $purple;
-    transform: scale(1.1);
-  }
-  &__open {
-    z-index: 10;
-    border-radius: 0 0 100% 0;
-    width: $big-bubble;
-    height: $big-bubble;
-    min-width: $min-bubble;
-    min-height: $min-bubble;
     background-color: $purple;
   }
 }
 
-.position-2 {
+.position:nth-of-type(2) {
   top: 0;
   right: 0;
   border-radius: 0 0 0 100%;
   background-color: $orange;
-  cursor: pointer;
+
   &:hover {
     background-color: $purple;
-    transform: scale(1.1);
-  }
-  &__open {
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: $big-bubble;
-    height: $big-bubble;
-    border-radius: 0 0 0 100%;
-    background-color: $orange;
-    min-width: $min-bubble;
-    min-height: $min-bubble;
   }
 }
 
-.position-3 {
+.position:nth-of-type(3) {
   bottom: 0;
   left: 0;
   border-radius: 0 100% 0 0;
   background-color: $purple;
-  cursor: pointer;
+
   &:hover {
     background-color: $orange;
-    transform: scale(1.1);
-  }
-  &__open {
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: $big-bubble;
-    height: $big-bubble;
-    border-radius: 0 100% 0 0;
-    background-color: $orange;
-    min-width: $min-bubble;
-    min-height: $min-bubble;
   }
 }
 
-.position-4 {
+.position:nth-of-type(4) {
   bottom: 0;
   right: 0;
   border-radius: 100% 0 0 0;
   background-color: $purple;
-  cursor: pointer;
+
   &:hover {
     background-color: $orange;
-    transform: scale(1.1);
   }
-  &__open {
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: $big-bubble;
-    height: $big-bubble;
-    border-radius: 100% 0 0 0;
-    background-color: $purple;
-    cursor: default;
-    min-width: $min-bubble;
-    min-height: $min-bubble;
-  }
+}
+
+.open-1 {
+  border-radius: 0 0 100% 0;
+  background-color: $purple;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.open-2 {
+  border-radius: 0 0 0 100%;
+  background-color: $purple;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  direction: rtl;
+}
+
+.open-3 {
+  border-radius: 0 100% 0 0;
+  background-color: $orange;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.open-4 {
+  border-radius: 100% 0 0 0;
+  background-color: $orange;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  direction: rtl;
 }
