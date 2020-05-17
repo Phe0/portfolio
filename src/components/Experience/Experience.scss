@@ -26,6 +26,8 @@ $max_font_p: 28px;
     &__content {
         width: 60vw;
         pointer-events: all;
+        max-height: 70vh;
+        overflow: hidden;
     }
 }
 
@@ -41,11 +43,12 @@ $max_font_p: 28px;
 
 .experiences {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 48%));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 48%));
     gap: 1rem;
 
     max-height: 70vh;
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 10px;
 }
 
@@ -59,7 +62,7 @@ $max_font_p: 28px;
 .experience-card {
     background-color: $white;
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 180px;
     overflow: hidden;
     padding: 1rem;
     box-sizing: border-box;
