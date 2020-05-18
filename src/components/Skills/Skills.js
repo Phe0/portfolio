@@ -4,7 +4,7 @@ import closeIcon from '../../assets/close.svg'
 import './Skills.scss'
 
 import skills from '../../utils/skills'
-import techs from '../../utils/tech'
+import SVGCircle from '../SVGCircle/SVGCircle'
 
 function Skills({close}) {
 
@@ -19,27 +19,19 @@ function Skills({close}) {
                 </section >
                 <section className="skills-content">
                     <p className="screen__about__body__text-area__text">
-                        Here are some of my skills.
+                        Here are some of my skills and technologies I enjoy using.
                     </p>
                     <section className="skills-content__section">
                         {
                             skills.map((skill, index) => (
-                                <span className="skill" key={index}>{skill}</span>
+                                <section className="skill" key={index}>
+                                    <div className="skill__info">
+                                        <h2 className="skill__info__name">{skill.name}</h2>
+                                        <h4 className="skill__info__level">{skill.level}</h4>
+                                    </div>
+                                </section>
                             ))
                         }
-                    </section>
-                    <p className="screen__about__body__text-area__text">
-                        And here are some of the technologies I enjoy using.
-                    </p>
-                    <section className="skills-content__section">
-                    {
-                        techs.map((tech, index) => (
-                            <figure className="tech" key={index}>
-                                <div className="tech__name">{tech.name}</div>
-                                <img className="tech__image" src={tech.image} alt={tech.name} />
-                            </figure>
-                        ))
-                    }
                     </section>
                 </section>
             </section>

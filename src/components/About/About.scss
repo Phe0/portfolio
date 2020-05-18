@@ -38,7 +38,7 @@ $max_font_p: 28px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            max-height: 70vh;
+            max-height: 80vh;
             overflow-y: auto;
 
             &__text-area {
@@ -82,7 +82,7 @@ $max_font_p: 28px;
 
             &__img-area {
                 margin: auto;
-                margin-bottom: 5px;
+                margin-bottom: 10vh;
                 width: 30vw;
                 height: 30vw;
                 max-width: 300px;
