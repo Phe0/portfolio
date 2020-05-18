@@ -1,6 +1,6 @@
 import React from 'react';
 import GoofyLine from '../GoofyLine/GoofyLine'
-import closeIcon from '../../assets/close.svg'
+import closeIcon from '../../assets/closeWhite.svg'
 import './Projects.scss'
 
 function Projects({close}) {

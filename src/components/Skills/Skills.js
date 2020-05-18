@@ -4,7 +4,6 @@ import closeIcon from '../../assets/close.svg'
 import './Skills.scss'
 
 import skills from '../../utils/skills'
-import SVGCircle from '../SVGCircle/SVGCircle'
 
 function Skills({close}) {
 

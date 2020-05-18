@@ -47,7 +47,7 @@ function BubbleNav() {
                 navs.map((nav, index) => {
                     return (
                         <div role="button" key={index} className={`bubble-nav__bubble position`
-                        } onClick={() => openBubble(index + 1)}>
+                        } onClick={() => openBubble(index + 1)} tabIndex="0">
                             <h6 className={`bubble-nav__bubble__item${index + 1}`}>{nav.name}</h6>
                         </div>
                     )
