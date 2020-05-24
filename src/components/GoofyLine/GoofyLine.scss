@@ -1,126 +1,43 @@
 @import "../../App.scss";
 
-.goofy-word.orange {
+.goofy-word {
+  cursor: default;
   font-family: $bold-font;
-
-  animation-name: bouncy-out-orange;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.goofy-word.orange:hover {
-  animation-name: bouncy-in-orange;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-.goofy-word.purple {
-  font-family: $bold-font;
-
-  animation-name: bouncy-out-purple;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.goofy-word.purple:hover {
-  animation-name: bouncy-in-purple;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-
-.goofy-word.white {
-  font-family: $bold-font;
-  color: $white;
   animation-name: bouncy-out;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-.goofy-word.white:hover {
+.goofy-word:hover {
   animation-name: bouncy-in;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
 
-.goofy-word.orange-only {
-  font-family: $bold-font;
+.orange-only {
   color: $orange;
-  animation-name: bouncy-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
 }
 
-.goofy-word.orange-only:hover {
-  animation-name: bouncy-in;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-.goofy-word.purple-only {
-  font-family: $bold-font;
+.purple-only {
   color: $purple;
-  animation-name: bouncy-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
 }
 
-.goofy-word.purple-only:hover {
-  animation-name: bouncy-in;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
+.orange {
+  color: $orange;
+  transition: all 0.3s;
 }
 
-@keyframes bouncy-in-purple {
-  0% {
-    transform: scale(1, 1);
-    color: $purple;
-  }
-  100% {
-    transform: scale(1.15, 0.85);
-    color: $orange;
-  }
+.orange:hover {
+  color: $purple;
 }
 
-@keyframes bouncy-out-purple {
-  0% {
-    transform: scale(1.15, 0.85);
-    color: $orange;
-  }
-  50% {
-    transform: scale(0.85, 1.15);
-    color: $orange;
-  }
-  100% {
-    transform: scale(1, 1);
-    color: $purple;
-  }
+.purple {
+  color: $purple;
+  transition: all 0.3s;
 }
 
-@keyframes bouncy-in-orange {
-  0% {
-    transform: scale(1, 1);
-    color: $orange;
-  }
-  100% {
-    transform: scale(1.15, 0.85);
-    color: $purple;
-  }
-}
-
-@keyframes bouncy-out-orange {
-  0% {
-    transform: scale(1.15, 0.85);
-    color: $purple;
-  }
-  50% {
-    transform: scale(0.85, 1.15);
-    color: $purple;
-  }
-  100% {
-    transform: scale(1, 1);
-    color: $orange;
-  }
+.purple:hover {
+  color: $orange;
 }
 
 @keyframes bouncy-in {
