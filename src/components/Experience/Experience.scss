@@ -1,9 +1,8 @@
 @import "../../App.scss";
 
-
 .close-icon {
-    width: 18px;
-    cursor: pointer;
+  width: 18px;
+  cursor: pointer;
 }
 
 $min_width_p: 320px;
@@ -12,97 +11,104 @@ $min_font_p: 20px;
 $max_font_p: 28px;
 
 .experience {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    &__content {
-        width: 60vw;
-        pointer-events: all;
-        max-height: 80vh;
-        overflow: hidden;
-    }
+  &__content {
+    width: 60vw;
+    pointer-events: all;
+    max-height: 80vh;
+    overflow: hidden;
+  }
 }
 
 .title-area {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
 
-    &__title {
-        width: 35%;
-    }
+  &__title {
+    width: 35%;
+  }
 }
 
 .experiences {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 48%));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 48%));
+  gap: 1rem;
 
-    max-height: 70vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .experience-text {
-    line-height: 1.4;
-    font-family: $main-font;
-    color: $white;
-    @include fluid-type($min_width_p, $max_width_p, $min_font_p, $max_font_p);
+  line-height: 1.4;
+  font-family: $main-font;
+  color: $white;
+  @include fluid-type($min_width_p, $max_width_p, $min_font_p, $max_font_p);
 }
 
 .experience-card {
-    background-color: $white;
-    border-radius: 10px;
-    min-width: 180px;
-    overflow: hidden;
-    padding: 1rem;
-    box-sizing: border-box;
+  background-color: $white;
+  border-radius: 10px;
+  min-width: 180px;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    &__heading {
-        &__place {
-            @include fluid-type(320px, 600px, 20px, 32px);
-            font-family: $bold-font;
-            font-weight: 400;
-            color: $purple;
-        }
-        &__role {
-            @include fluid-type(320px, 600px, 20px, 24px);
-            font-family: $bold-font;
-            font-weight: 400;
-            color: $orange;
-        }
+  transition: all.2s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &__heading {
+    &__place {
+      @include fluid-type(320px, 600px, 20px, 32px);
+      font-family: $bold-font;
+      font-weight: 400;
+      color: $purple;
     }
-
-    &__date {
-        color: #353535;
-        margin: 0;
-        margin-top: 1.5rem;
-        text-align: right;
-        font-family: $bold-font;
-        font-weight: 100;
-        @include fluid-type(320px, 600px, 10px, 14px);
+    &__role {
+      @include fluid-type(320px, 600px, 20px, 24px);
+      font-family: $bold-font;
+      font-weight: 400;
+      color: $orange;
     }
+  }
 
-    &__description {
-        color: #353535;
-        margin: 0;
-        margin-top: 1.5rem;
-        text-align: justify;
-        font-family: $main-font;
-        @include fluid-type(320px, 600px, 14px, 20px);
-    }
+  &__date {
+    color: #353535;
+    margin: 0;
+    margin-top: 1.5rem;
+    text-align: right;
+    font-family: $bold-font;
+    font-weight: 100;
+    @include fluid-type(320px, 600px, 10px, 14px);
+  }
+
+  &__description {
+    color: #353535;
+    margin: 0;
+    margin-top: 1.5rem;
+    text-align: justify;
+    font-family: $main-font;
+    @include fluid-type(320px, 600px, 14px, 20px);
+  }
 }
-
