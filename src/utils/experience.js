@@ -8,11 +8,19 @@ export default [
     link: "https://www.unb.br/",
   },
   {
+    place: "Probono Digital",
+    date: "06/2020 - now",
+    role: "Software Engineer",
+    description:
+      "Probono Digital is a legaltech startup focused on bringing the best experience to the people enrolled in a legal proccess. Our stack consists of Sails.js for the backend, React.js for the web app, React Native for the mobile app and Python for bots and webscrappers.",
+    link: "https://www.probonodigital.com/",
+  },
+  {
     place: "React-it Solutions",
-    date: "07/2019 - now",
+    date: "07/2019 - 06/2020",
     role: "Intern",
     description:
-      "React-it Solutions is a software factory. There I've worked in the development of multipple applications, using Angular, React and Node.js.",
+      "React-it Solutions is a software factory where I've worked in the development of multipple applications, using Angular, React and Node.js.",
     link: "https://www.react-it.com/",
   },
   {

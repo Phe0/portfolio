@@ -22,10 +22,13 @@ function About({ close }) {
                             Hello! My name is Pedro Féo, I'm a Software Engineer student based in Brasília, Brazil. I enjoy developing websites and web apps that are not only intuitive but also fun to use.
                         </p>
                         <p className="screen__about__body__text-area__text">
-                            Currently I'm attending to <a href="https://www.unb.br/">UnB</a>, where I had the opportunity to work on a variety of projects, programs and classes. Besides that I'm a developer intern at <a href="https://react-it.com/">React-it Solutions</a>, where I work on many projects on a daily basis.
+                            Currently I'm attending to <a href="https://www.unb.br/">UnB</a>, where I have the opportunity to work on a variety of projects, programs and classes.
                         </p>
                         <p className="screen__about__body__text-area__text">
-                            I love boldering and spending time with my friends.
+                            I'm also a software engineer at <a href="https://www.probonodigital.com" >Probono Digital</a> where I have the opportunity to work with a remote multidisciplinary team with a common objective.
+                        </p>
+                        <p className="screen__about__body__text-area__text">
+                            Some of my hobbies are drawing, boldering and spending time with my friends.
                         </p>
                     </article>
                     <figure className="screen__about__body__img-area">

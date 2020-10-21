@@ -63,4 +63,8 @@ export default [
     name: "Gitlab CI",
     level: "Basic",
   },
+  {
+    name: "AWS",
+    level: "Basic",
+  },
 ];
