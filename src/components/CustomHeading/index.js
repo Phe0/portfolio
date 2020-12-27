@@ -1,5 +1,5 @@
 import React from 'react'
-import './CustomHeading.scss'
+import './index.scss'
 
 const CustomHeading = (props) => {
 

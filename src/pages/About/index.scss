@@ -1,9 +1,18 @@
-@import "../../App.scss";
+@import "../../style/colors.scss";
+@import "../../style/font.scss";
+@import "../../style/sizes.scss";
 
-$min_width_p: 320px;
-$max_width_p: 1200px;
-$min_font_p: 20px;
-$max_font_p: 28px;
+
+.transition-appear {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.transition-appear.transition-appear-active {
+    opacity: 1;
+    transform: translateX(0);;
+    transition: all 0.4s linear;
+}
 
 .close-icon {
     width: 18px;
@@ -18,6 +27,8 @@ $max_font_p: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: $purple;
 
     &__about {
         width: 70vw;

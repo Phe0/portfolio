@@ -1,4 +1,5 @@
-@import "../../App.scss";
+@import "../../style/colors.scss";
+@import "../../style/font.scss";
 
 $bubble-size: 16vh;
 
@@ -79,6 +80,7 @@ $bubble-size: 16vh;
 
 .open {
   overflow: hidden;
+  z-index: 10;
   @include bubbleSize;
 }
 
@@ -97,6 +99,10 @@ $bubble-size: 16vh;
   &:hover {
     background-color: $purple;
   }
+}
+
+.hide {
+  display: none;
 }
 
 .position:nth-of-type(2) {
@@ -130,38 +136,4 @@ $bubble-size: 16vh;
   &:hover {
     background-color: $orange;
   }
-}
-
-.open-1 {
-  border-radius: 0 0 100% 0;
-  background-color: $purple;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.open-2 {
-  border-radius: 0 0 0 100%;
-  background-color: $purple;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  direction: rtl;
-}
-
-.open-3 {
-  border-radius: 0 100% 0 0;
-  background-color: $orange;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.open-4 {
-  border-radius: 100% 0 0 0;
-  background-color: $orange;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  direction: rtl;
 }

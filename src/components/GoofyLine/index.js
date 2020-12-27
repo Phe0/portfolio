@@ -1,7 +1,7 @@
 import React from 'react'
-import './GoofyLine.scss'
+import './index.scss'
 
-import CustomHeading from '../CustomHeading/CustomHeading'
+import CustomHeading from '../CustomHeading'
 
 const GoofyLine = (props) => {
 

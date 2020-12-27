@@ -1,4 +1,5 @@
-@import "../../App.scss";
+@import "../../style/colors.scss";
+@import "../../style/font.scss";
 
 
 .close-icon {
@@ -15,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: $purple;
 
     &__content {
         width: 70vw;
