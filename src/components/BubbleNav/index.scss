@@ -19,12 +19,11 @@ $bubble-size: 16vh;
 }
 
 .bubble-nav {
-
   &__bubble {
     position: absolute;
     width: $bubble-size;
     height: $bubble-size;
-    transition: transform .2s, width .6s, height .6s; 
+    transition: transform 0.2s, width 0.6s, height 0.6s;
     border: none;
     overflow: hidden;
 
@@ -94,7 +93,7 @@ $bubble-size: 16vh;
   top: 0;
   left: 0;
   border-radius: 0 0 100% 0;
-  background-color: $orange;
+  background-color: $pink;
 
   &:hover {
     background-color: $purple;
@@ -109,7 +108,7 @@ $bubble-size: 16vh;
   top: 0;
   right: 0;
   border-radius: 0 0 0 100%;
-  background-color: $orange;
+  background-color: $pink;
 
   &:hover {
     background-color: $purple;
@@ -123,7 +122,7 @@ $bubble-size: 16vh;
   background-color: $purple;
 
   &:hover {
-    background-color: $orange;
+    background-color: $pink;
   }
 }
 
@@ -134,6 +133,6 @@ $bubble-size: 16vh;
   background-color: $purple;
 
   &:hover {
-    background-color: $orange;
+    background-color: $pink;
   }
 }

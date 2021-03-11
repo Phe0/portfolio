@@ -27,4 +27,17 @@ export default [
     tags: ["ReactJS", "Python", "microservices", "Agile"],
     link: "https://github.com/Kalkuli",
   },
+  {
+    name: "Algorithms",
+    description:
+      "A bunch of small projects mde with ReactJS using some classic computer science algoritms.",
+    tags: [
+      "ReactJS",
+      "Graphs",
+      "Greed",
+      "Dynamic Programming",
+      "Divide and Conquer",
+    ],
+    localLink: "/algorithms",
+  },
 ];

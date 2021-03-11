@@ -10,7 +10,7 @@ export default [
   {
     place: "Probono Digital",
     date: "06/2020 - now",
-    role: "Software Engineer",
+    role: "Software Developer",
     description:
       "Probono Digital is a legaltech startup focused on bringing the best experience to the people enrolled in a legal proccess. Our stack consists of Sails.js for the backend, React.js for the web app, React Native for the mobile app and Python for bots and webscrappers.",
     link: "https://www.probonodigital.com/",

@@ -18,7 +18,8 @@ h6 {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   position: relative;
   overflow: hidden;
 }
@@ -51,22 +52,21 @@ html, body {
   }
 }
 
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
   margin-left: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #efefef; 
+  background: #efefef;
   border-radius: 8px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #efefefb3; 
+  background: #efefefb3;
 }
 
 .contacts {
@@ -83,11 +83,11 @@ html, body {
     cursor: pointer;
     fill: $purple;
 
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:hover {
       transform: scale(1.1);
-      fill: $orange;
+      fill: $pink;
     }
   }
 }

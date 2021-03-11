@@ -1,7 +1,7 @@
 export default [
   {
     name: "Git",
-    level: "Intermediate",
+    level: "Advanced",
   },
   {
     name: "HTML5",
@@ -13,15 +13,19 @@ export default [
   },
   {
     name: "Javascript",
-    level: "Intermediate",
+    level: "Advanced",
   },
   {
     name: "Typescript",
     level: "Intermediate",
   },
   {
-    name: "React",
+    name: "ReactJS",
     level: "Advanced",
+  },
+  {
+    name: "React Native",
+    level: "Intermediate",
   },
   {
     name: "Node.js",
@@ -37,7 +41,7 @@ export default [
   },
   {
     name: "Vue",
-    level: "Basic",
+    level: "Intermediate",
   },
   {
     name: "Python",
@@ -61,10 +65,26 @@ export default [
   },
   {
     name: "Gitlab CI",
-    level: "Basic",
+    level: "Intermediate",
+  },
+  {
+    name: "Github Actions",
+    level: "Intermediate",
+  },
+  {
+    name: "Travis CI",
+    level: "Intermediate",
+  },
+  {
+    name: "Circle CI",
+    level: "Intermediate",
   },
   {
     name: "AWS",
-    level: "Basic",
+    level: "Intermediate",
+  },
+  {
+    name: "Selenium",
+    level: "Intermediate",
   },
 ];

@@ -15,20 +15,20 @@
   animation-fill-mode: forwards;
 }
 
-.orange-only {
-  color: $orange;
+.pink-only {
+  color: $pink;
 }
 
 .purple-only {
   color: $purple;
 }
 
-.orange {
-  color: $orange;
+.pink {
+  color: $pink;
   transition: all 0.3s;
 }
 
-.orange:hover {
+.pink:hover {
   color: $purple;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .purple:hover {
-  color: $orange;
+  color: $pink;
 }
 
 @keyframes bouncy-in {
