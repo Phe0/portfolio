@@ -27,6 +27,10 @@ $bubble-size: 16vh;
     border: none;
     overflow: hidden;
 
+    & p {
+      margin: 0;
+    }
+
     &__item1 {
       color: $white;
       font-family: $bold-font;

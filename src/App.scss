@@ -3,11 +3,19 @@
 @import "./style/sizes.scss";
 
 h2.fluid {
-  @include fluid-type(100px, 2000px, 10px, 24px);
+  @include fluid-type(260px, 1000px, 20px, 30px);
 }
 
 h3.fluid {
-  @include fluid-type(100px, 2000px, 8px, 16px);
+  @include fluid-type(260px, 1000px, 12px, 18px);
+}
+
+h2.fluid-bubble {
+  @include fluid-type(100px, 120px, 12px, 16px);
+}
+
+h3.fluid-bubble {
+  @include fluid-type(100px, 120px, 8px, 10px);
 }
 
 .transition-appear {
@@ -62,7 +70,7 @@ h3.fluid {
 
   & a {
     position: relative;
-    color: $pink;
+    color: $pinkLink;
     text-decoration: none;
 
     &:before {
@@ -87,14 +95,17 @@ h3.fluid {
 }
 
 .screen {
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 
   &__content {
     width: 70vw;
+    height: 100%;
     min-width: 300px;
     pointer-events: all;
   }
@@ -103,7 +114,7 @@ h3.fluid {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-    padding: 0 1rem;
+    padding-top: 24px;
 
     & article {
       width: 35%;
@@ -112,10 +123,7 @@ h3.fluid {
   }
 
   &__body {
-    padding: 1rem;
-    max-height: 70vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    padding-bottom: 24px;
 
     &--flex {
       display: flex;
@@ -125,7 +133,6 @@ h3.fluid {
 
     &--grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 48%));
       gap: 1rem;
     }
   }
@@ -172,11 +179,12 @@ h3.fluid {
   &__skills {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem;
+    justify-content: center;
   }
 }
 
 .skill {
+  background-color: $pinkLink;
   width: 9vw;
   height: 9vw;
   min-width: 100px;
@@ -240,12 +248,18 @@ h3.fluid {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    min-width: 260px;
+  }
+}
+
 .card {
   background-color: $white;
   border-radius: 10px;
-  min-width: 180px;
   overflow: hidden;
   padding: 1rem;
+  min-width: 240px;
   box-sizing: border-box;
   height: 100%;
 

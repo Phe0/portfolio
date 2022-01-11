@@ -1,13 +1,5 @@
-import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React from "react";
 
 export default function Transition({ children }) {
-    return (
-        <ReactCSSTransitionGroup
-            transitionAppear
-            transitionName="transition"
-        >
-            {children}
-        </ReactCSSTransitionGroup>
-    )
+  return <>{children}</>;
 }

@@ -16,7 +16,7 @@ export default function Main() {
             <GoofyLine line="software" priority="3" color="pink" />
             <GoofyLine line="engineer" priority="3" color="pink" />
             <section className="contacts">
-              <a href="mailto:pheofo@gmail.com" tabIndex="0">
+              <a href="mailto:pheofo@gmail.com" aria-label="Send me an email">
                 <figure>
                   <svg
                     className="contacts__icon"
@@ -29,7 +29,10 @@ export default function Main() {
                 </figure>
               </a>
 
-              <a href="https://github.com/Phe0" tabIndex="0">
+              <a
+                href="https://github.com/Phe0"
+                aria-label="Visit my github page"
+              >
                 <figure>
                   <svg
                     className="contacts__icon"
@@ -41,7 +44,10 @@ export default function Main() {
                 </figure>
               </a>
 
-              <a href="https://www.linkedin.com/in/pedrofeo/" tabIndex="0">
+              <a
+                href="https://www.linkedin.com/in/pedrofeo/"
+                aria-label="Visit my linkedin page"
+              >
                 <figure>
                   <svg
                     className="contacts__icon"
