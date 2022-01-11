@@ -1,4 +1,4 @@
-export default [
+const skills = [
   {
     name: "Git",
     level: "Advanced",
@@ -88,3 +88,5 @@ export default [
     level: "Intermediate",
   },
 ];
+
+export default skills;

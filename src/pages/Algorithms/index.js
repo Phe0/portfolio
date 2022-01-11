@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GoofyLine from "../../components/GoofyLine";
-import Trasition from "../../components/Transition";
 import closeIcon from "../../assets/closeWhite.svg";
 import Card from "../../components/Card";
 import algorithms from "../../utils/algorithms";

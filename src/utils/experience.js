@@ -1,4 +1,4 @@
-export default [
+const experiences = [
   {
     place: "Thoughtworks",
     date: "12/2021 - now",
@@ -48,3 +48,5 @@ export default [
     link: "https://www.summerjob.cesar.org.br/",
   },
 ];
+
+export default experiences;

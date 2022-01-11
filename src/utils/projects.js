@@ -1,4 +1,4 @@
-export default [
+const projects = [
   {
     name: "Mia Ajuda",
     description:
@@ -41,3 +41,5 @@ export default [
     localLink: "/algorithms",
   },
 ];
+
+export default projects;

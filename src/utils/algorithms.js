@@ -1,4 +1,4 @@
-export default [
+const algorithms = [
   {
     name: "Police and Thief",
     description:
@@ -46,3 +46,5 @@ export default [
     githubLink: "https://github.com/projeto-de-algoritmos/Final-pintura-casas",
   },
 ];
+
+export default algorithms;
