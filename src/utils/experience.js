@@ -1,5 +1,13 @@
 export default [
   {
+    place: "Thoughtworks",
+    date: "12/2021 - now",
+    role: "Developer Consultant",
+    description:
+      "I'm currently a Developer Consultant at Thoughtworks, working on a variety of web development projects.",
+    link: "https://www.thoughtworks.com/",
+  },
+  {
     place: "UnB",
     date: "03/2017 - now",
     role: "Student",
@@ -9,7 +17,7 @@ export default [
   },
   {
     place: "Probono Digital",
-    date: "06/2020 - now",
+    date: "06/2020 - 08/2021",
     role: "Software Developer",
     description:
       "Probono Digital is a legaltech startup focused on bringing the best experience to the people enrolled in a legal proccess. Our stack consists of Sails.js for the backend, React.js for the web app, React Native for the mobile app and Python for bots and webscrappers.",

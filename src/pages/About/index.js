@@ -37,14 +37,13 @@ export default function About() {
               classes.
             </p>
             <p className="text gray-text">
-              I'm also a software developer at{" "}
-              <a href="https://www.probonodigital.com">Probono Digital</a> where
-              I have the opportunity to work with a remote multidisciplinary
-              team with the common objective of bringing rights for everyone.
+              I'm also a developer consultant at{" "}
+              <a href="https://www.thoughtworks.com/">Thoughtworks</a> where I'
+              working on a variety of web development projects'.
             </p>
             <p className="text gray-text">
-              Some of my hobbies are drawing, boldering and spending time with
-              my friends.
+              Some of my hobbies are playing volleyball, bouldering and spending
+              time with my friends.
             </p>
           </article>
           <figure className="screen__img">
